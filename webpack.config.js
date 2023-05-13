@@ -62,16 +62,16 @@ const index = {
   },
 };
 
-const task2 = {
-  entry: './src/2-task/index.js',
+const task1 = {
+  entry: './src/1-task/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist', '2-task'),
+    path: path.resolve(__dirname, 'dist', '1-task'),
     filename: 'index.js',
   },
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/2-task/index.html',
+      template: './src/1-task/index.html',
       filename: 'index.html',
     }),
     new MiniCssExtractPlugin({
@@ -124,4 +124,4 @@ const task3 = {
   },
 };
 
-module.exports = [index, task2, task3];
+module.exports = [index, task1,];
