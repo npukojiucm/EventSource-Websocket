@@ -25,10 +25,10 @@ body {
     margin: 0 auto;
     padding: 3rem 2.5rem;
 
-    background-image: url("notebook-cell.jpg");
+    background-image: url("./img/notebook-cell.jpg");
 }
 
-
+/* Вход в чат */
 .login-form {
     width: 400px;
 
@@ -55,8 +55,23 @@ body {
     display: block;
 }
 
-.login-nickname {
+.form-group {
     position: relative;
+
+    transition: display 200ms linear;
+}
+
+.error-message {
+    position: absolute;
+    bottom: -17px;
+    left: 20px;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: red;
+}
+
+.login-nickname {
     width: 100%;
     height: 35px;
 
@@ -65,16 +80,6 @@ body {
 
     font-size: 1.5rem;
     font-family: inherit;
-}
-
-.login-nickname:before {
-    content: "Такой пользователь уже существует";
-
-    position: absolute;
-    bottom: -10px;
-    left: 5px;
-
-    color: red;
 }
 
 .login-submit {
@@ -98,4 +103,97 @@ body {
 .login-submit:focus,
 .login-submit:hover {
     background-color: #46ff00;
+}
+
+
+
+/* Чат */
+
+/* *** Список участников */
+.chat-members {
+    position: relative;
+
+    width: 220px;
+    padding: 1.5rem;
+    margin-left: calc(50% - 450px);
+    margin-top: 5rem;
+
+    border: 1px solid black;
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+    background-color: white;
+}
+
+.members-list {
+    display: flex;
+    flex-direction: column-reverse;
+    
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.list-item {
+    display: flex;
+    height: 40px;
+    padding: 0.5rem;
+    align-items: center;
+}
+
+.item-avatar {
+    display: inline-block;
+    width: 31px;
+    height: 31px;
+
+    border: 1px solid black;
+    border-radius: 50%;
+
+    
+}
+
+.item-nickname {
+    margin-left: 0.5rem;
+}
+
+/* *** Сообщения */
+
+.chat {
+    position: absolute;
+    top: -50px;
+    right: -600px;
+
+    width: 600px;
+    height: 500px;
+    
+    border: 1px solid black;
+    border-radius: 2rem;
+    background-color: white;
+
+    z-index: 2;
+}
+.chat-messages {
+    display: flex;
+    flex-direction: column-reverse;
+    
+    height: 400px;
+    margin: 1rem;
+    overflow-y: scroll;
+}
+
+.message {
+    padding: 1rem;
+}
+
+.align-style {
+    text-align: right;
+}
+
+.send-message {
+    width: 560px;
+    height: 40px;
+
+    margin: 2rem;
+    padding: 1rem;
+
+    border-radius: 1rem;
 }
