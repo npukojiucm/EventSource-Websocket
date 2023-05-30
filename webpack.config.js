@@ -75,6 +75,42 @@ const task1 = {
   },
 };
 
+const task2 = {
+  entry: './src/2-task/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist', '2-task'),
+    filename: 'index.js',
+    assetModuleFilename: 'img/[name][ext]',
+  },
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/2-task/index.html',
+      filename: 'index.html',
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'index.css',
+    }),
+  ],
+
+  module: {
+    rules: [
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
+      {
+        test: /\.png/,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+      },
+    ],
+  },
+};
+
 // const task3 = {
 //   entry: './src/3-task/index.js',
 //   output: {
@@ -106,4 +142,4 @@ const task1 = {
 //   },
 // };
 
-module.exports = [index, task1];
+module.exports = [index, task1, task2];
