@@ -1,3 +1,5 @@
+/* eslint-disable class-methods-use-this */
+/* eslint-disable consistent-return */
 import { autorun } from 'mobx';
 
 export default class WorkLog {
