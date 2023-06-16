@@ -18,7 +18,7 @@ export default class WebsocketClient {
 
     this.client.on('connect', () => console.log('connect'));
 
-    arrObjChannelAndFunc.forEach(object => {
+    arrObjChannelAndFunc.forEach((object) => {
       this.client.on(object.channel, object.function);
     });
   }

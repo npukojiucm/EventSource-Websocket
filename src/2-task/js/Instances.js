@@ -1,5 +1,6 @@
+/* eslint-disable class-methods-use-this */
 /* eslint-disable consistent-return */
-import { autorun, reaction } from 'mobx';
+import { autorun } from 'mobx';
 import buttons from './button';
 
 export default class Instances {

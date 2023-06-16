@@ -1,6 +1,6 @@
-import Instances from "./Instances";
-import StateManager from "./StateManager";
-import WorkLog from "./WorkLog";
+import Instances from './Instances';
+import StateManager from './StateManager';
+import WorkLog from './WorkLog';
 
 const stateManager = new StateManager('ws://localhost:3001');
 stateManager.setConnect([{
