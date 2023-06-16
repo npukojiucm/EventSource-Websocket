@@ -1,5 +1,5 @@
 import Chat from './Chat';
 
-const chat = new Chat('.container', 'ws://websocket-server-ugmt.onrender.com');
+const chat = new Chat('.container', 'ws://localhost:3000');
 
 chat.init();
