@@ -1,3 +1,6 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/9c838f7r20lky4i2?svg=true)](https://ci.appveyor.com/project/npukojiucm/eventsource-websocket)
+
+
 # Домашнее задание к занятию "8. EventSource, Websockets"
 
 Правила сдачи задания:

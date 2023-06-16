@@ -1,3 +1,5 @@
+/* eslint-disable no-param-reassign */
+/* eslint-disable class-methods-use-this */
 /* eslint-disable max-len */
 /* eslint-disable prefer-const */
 /* eslint-disable no-console */
