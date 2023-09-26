@@ -1,4 +1,4 @@
-name: working-with-html-form
+name: eventsource-websocket
 
 on: [push, pull_request]
 

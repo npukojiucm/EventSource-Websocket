@@ -23,7 +23,7 @@ export default class Chat extends WebsocketClient {
       e.preventDefault();
       const form = e.target;
 
-      const response = await fetch('localhost:3000/api/login', {
+      const response = await fetch('https://websocket-server-ugmt.onrender.com/api/login', {
         method: 'POST',
         body: new FormData(form),
       });
