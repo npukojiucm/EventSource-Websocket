@@ -2,7 +2,7 @@ import Instances from './Instances';
 import StateManager from './StateManager';
 import WorkLog from './WorkLog';
 
-const stateManager = new StateManager('ws://localhost:3000');
+const stateManager = new StateManager('wss://websocket-server-ugmt.onrender.com');
 stateManager.setConnect([{
   channel: 'command_response',
   function: stateManager.commandListener,
